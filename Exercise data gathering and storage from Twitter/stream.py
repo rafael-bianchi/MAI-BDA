@@ -8,7 +8,7 @@ MONGO_HOST= 'mongodb://localhost/test'  # assuming you have mongoDB installed lo
                                         # if 'test' doesn't exist, it will be created
 
 # Change your hashtags here
-WORDS = ['#brexit'] # This is an OR relation
+WORDS = ['#brexit'] # This is an OR relation    	
 
 # Insert your keys here
 CONSUMER_KEY = "0DWf1zhR0otv2apbXEUOGklbA"
