@@ -143,6 +143,10 @@ numTweets = db.brexitSearch.count()
 # # END - Getting information from geolocation on user's profile
 # ##################################################################
 
+
+# ##################################################################
+# # Plotting density map of tweets count for #brexit 
+# ##################################################################
 my_tweets.rewind()
 countries = []
 for t in my_tweets:
@@ -156,12 +160,15 @@ countries = shpreader.Reader(
     'mapdata/ne_10m_admin_0_countries_lakes.shp')
 
 crs = ccrs.PlateCarree()
+cmap = plt.cm.get_cmap('YlGn')
 ax = plt.axes(projection=crs)
 
 norm = Normalize(
 	vmin=min(D.values()), vmax=max(D.values()))
 
-cmap = plt.cm.get_cmap('YlGn')
+sm = plt.cm.ScalarMappable(cmap=cmap,norm=norm)
+sm._A = []
+plt.colorbar(sm,ax=ax)
 
 for country in countries.records():
 	cm = 'none'
@@ -175,5 +182,4 @@ for country in countries.records():
 	ax.add_feature(sp)
 
 ax.coastlines()
-
 plt.show()
