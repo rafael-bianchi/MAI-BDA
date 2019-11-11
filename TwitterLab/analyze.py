@@ -87,9 +87,9 @@ plt.show()
 my_tweets.rewind()
 hashList = []
 for t in my_tweets:
-    for e in t['entities']['hashtags']:
-        h = e['text']
-        if h.lower() != 'brexit':
+	for e in t['entities']['hashtags']:
+		h = e['text']
+		if h.lower() != 'brexit':
 			hashList.append(h.lower())
 D = Counter(hashList)
 subset = dict(D.most_common(30))
