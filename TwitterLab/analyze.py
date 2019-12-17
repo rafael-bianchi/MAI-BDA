@@ -41,7 +41,7 @@ for t in my_tweets:
 	langsList.append(t['lang'])
 
 D = Counter(langsList) 
-D_sorted = sorted(dict(D).iteritems(), key=operator.itemgetter(1), reverse=True)
+D_sorted = sorted(dict(D).items(), key=operator.itemgetter(1), reverse=True)
 # ----------- Bar Plot ------------------------
 plt.bar(range(len(D_sorted)), [val[1] for val in D_sorted], align='center')
 plt.xticks(range(len(D_sorted)), [val[0] for val in D_sorted])
@@ -93,7 +93,7 @@ for t in my_tweets:
 			hashList.append(h.lower())
 D = Counter(hashList)
 subset = dict(D.most_common(30))
-sorted_subset = sorted(subset.iteritems(), key=operator.itemgetter(1))
+sorted_subset = sorted(subset.items(), key=operator.itemgetter(1))
 
 # ----------- Horizontal Bar Plot ------------------------
 pos = range(len(sorted_subset))
