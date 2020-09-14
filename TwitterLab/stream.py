@@ -11,10 +11,10 @@ MONGO_HOST= 'mongodb://localhost/test'  # assuming you have mongoDB installed lo
 WORDS = ['#brexit'] # This is an OR relation    	
 
 # Insert your keys here
-CONSUMER_KEY = "0DWf1zhR0otv2apbXEUOGklbA"
-CONSUMER_SECRET = "6j96Dn4X1w7ujezPtGpkZlTr7jFjNZXTf10gxw08cOSmXywwB6"
-ACCESS_TOKEN = "42145302-CQOGwdsFEyh7puMSSOmp46XDHvolmn4sd4LN8Gvx2"
-ACCESS_TOKEN_SECRET = "ek7v59Se8EshBWCLxwbYkkhi8OLqp7YFfdT9avdSpbiln"
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
+ACCESS_TOKEN = ''
+ACCESS_TOKEN_SECRET = ''
 
 
 class StreamListener(tweepy.StreamListener):    
